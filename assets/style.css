@@ -1,0 +1,527 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*mon ajout de css*/
+
+/* Styles généraux */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Conteneur principal */
+main {
+  width: 80%; /* Ajuste selon tes besoins */
+  max-width: 1200px; /* Empêche que ça s'étende trop sur grands écrans */
+  margin: 20px auto; /* Centre horizontalement */
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Tableaux */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* En-tête du tableau */
+thead {
+  background-color: #007bff;
+  color: white;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Alternance des couleurs de lignes */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Lien utilisateur */
+a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.new-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  max-width: 600px;
+}
+
+.new-card p {
+  font-size: 18px;
+  color: #555;
+}
+
+.new-card strong {
+  color: #000;
+}
+
+/* Titre */
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+/* Carte utilisateur */
+.new-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.new-card:hover {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.new-card p {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.new-card strong {
+  color: #007bff;
+}
+
+/* Lien utilisateur */
+a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Champs de texte */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="submit"],
+textarea,
+button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Bouton de soumission */
+input[type="submit"],
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: #0056b3;
+}
+
+textarea {
+  font-size: 16px;
+  padding: 10px;
+  width: 100%; /* Occupe toute la largeur de son conteneur */
+  max-width: 100%; /* Empêche qu'elle dépasse l'écran */
+  min-width: 100%; /* Évite qu'elle soit plus petite que son conteneur */
+  box-sizing: border-box; /* Inclut les bordures et padding dans la largeur */
+  resize: vertical; /* Permet uniquement le redimensionnement vertical */
+}
+
+/* Groupement des champs */
+.form-group {
+  margin: 15px 0px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.form-group-action {
+  display: flex;
+  justify-content: center; /* Centre les boutons horizontalement */
+  align-items: center; /* Centre verticalement */
+  gap: 10px; /* Espacement entre les boutons */
+}
+
+.form-group-action input[type="submit"],
+.form-group-action button {
+  max-width: 150px; /* Ajuste selon ton design */
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  background-color: #007bff; /* Ajuste selon ton design */
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Ajuste l'espacement entre les liens */
+  padding: 10px;
+  list-style: none;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 7px 15px;
+  transition: background 0.3s ease-in-out;
+  border-radius: 20px;
+}
+
+nav ul li a:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Style spécifique à l'élément Home 
+nav ul li.home a {
+  background-color: #0056b3;
+  border-radius: 5px;
+}*/
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.error-message {
+  padding-top: 20px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal button {
+  margin: 10px;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Suppression logique */
+.modal button.delete-soft {
+  background: #007bff; /* Bleu vif */
+  color: white;
+}
+
+.modal button.delete-soft:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Annuler */
+.modal button.delete-cancel {
+  background: #28a745; /* Vert rassurant */
+  color: white;
+}
+
+.modal button.delete-cancel:hover {
+  background: #1e7e34;
+  transform: scale(1.05);
+}
+
+/* Suppression physique */
+.modal button.delete-hard {
+  background: #dc3545; /* Rouge alerte */
+  color: white;
+}
+
+.modal button.delete-hard:hover {
+  background: #b02a37;
+  transform: scale(1.05);
+}
+
+/* Style du label */
+label[for="category"] {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  margin-right: 10px;
+}
+
+/* Style du select */
+#category {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid rgba(170, 170, 170);
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Menu responsive */
+@media (max-width: 768px) {
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  main {
+    width: 100%;
+    padding: 10px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    max-width: 130px;
+  }
+
+  header {
+    width: 115px;
+  }
+
+  table {
+    font-size: 10px;
+  }
+}
